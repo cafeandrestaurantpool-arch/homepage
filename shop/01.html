@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>器と暮らし つむぎ｜オンラインストア</title>
+<meta name="description" content="器と暮らし つむぎ｜オンラインストア（サンプルサイト）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;600&family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Maru+Gothic:wght@500;700&family=Zen+Old+Mincho:wght@600;900&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+.site :focus-visible{outline:2px solid #4a90e2;outline-offset:2px}
+/* ---- 共通パーツ（各サイトの変数で見た目が変わる） ---- */
+.site{background:var(--bg);color:var(--fg);font-family:var(--fb);line-height:1.8;font-size:15px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:18px}
+.logo{font-family:var(--fd);font-size:22px;line-height:1.2}
+.logo small{display:block;font-family:var(--fb);font-size:11px;letter-spacing:.12em;opacity:.7}
+.nav{display:flex;gap:6px 20px;flex-wrap:wrap;font-size:13px}
+.nav a{text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;text-decoration:underline}
+.sec{padding-block:72px}
+.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;font-weight:700}
+.site h1,.site h2,.site h3{font-family:var(--fd);text-wrap:balance;line-height:1.35}
+.site h2{font-size:clamp(24px,3.6vw,34px);margin:.25em 0 1em}
+.site h3{font-size:18px;margin:.6em 0 .3em}
+.lead{max-width:36em;opacity:.85}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.grid>*{min-width:0}
+.ph{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;border-radius:var(--r);display:flex;align-items:flex-end;padding:12px 14px;font-size:11px;letter-spacing:.06em;overflow:hidden}
+.ph span{background:rgba(0,0,0,.35);color:#fff;padding:2px 8px;border-radius:4px}
+.btn{display:inline-block;appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14px;padding:13px 26px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1px currentColor}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:left;vertical-align:top}
+.tbl th{font-weight:700;white-space:nowrap;width:9em}
+.foot{border-top:1px solid var(--line);font-size:12px;opacity:.8}
+.foot .wrap{padding-block:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.form{display:grid;gap:14px;max-width:560px}
+.form label{display:grid;gap:4px;font-size:13px;font-weight:700}
+.form input,.form textarea,.form select{font:inherit;font-weight:400;padding:11px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--field);color:var(--fg);width:100%}
+.form-msg{font-size:13px;color:var(--accent);font-weight:700;min-height:1.4em}
+.price-list{list-style:none;margin:0;padding:0}
+.price-list li{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.price-list .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.price-list .yen{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+.price-list small{display:block;font-size:12px;opacity:.7}
+.demo-note{font-size:11px;opacity:.6}
+
+/* ===== 6 通販 ===== */
+.s-shop{--bg:#f5f5f2;--fg:#222423;--accent:#2f5470;--on-accent:#fff;--line:#dcdcd6;--field:#fff;--r:4px;
+  --fd:"Shippori Mincho",serif;--fb:"Zen Kaku Gothic New",sans-serif}
+.s-shop .notice{background:var(--accent);color:#fff;font-size:12px;text-align:center;padding-block:7px}
+.s-shop .cart{display:inline-flex;align-items:center;gap:8px;font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 14px;background:#fff}
+.s-shop .cart b{background:var(--accent);color:#fff;border-radius:999px;min-width:22px;text-align:center;font-size:12px;padding:1px 6px;font-variant-numeric:tabular-nums}
+.s-shop .hero .wrap{padding-block:40px 24px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.s-shop .hero h1{font-size:clamp(28px,4.6vw,46px);margin:.2em 0 .4em;font-weight:700}
+.s-shop .hero .ph{background:linear-gradient(140deg,#e7e2d8,#c3b9a6 50%,#6f7f8c);aspect-ratio:16/10}
+.s-shop .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.s-shop .fbtn{appearance:none;font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;color:var(--fg);border-radius:999px;padding:6px 16px;cursor:pointer}
+.s-shop .fbtn[aria-pressed="true"]{background:var(--fg);color:#fff;border-color:var(--fg)}
+.s-shop .products{display:grid;gap:28px 20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr))}
+.s-shop .prod{display:flex;flex-direction:column;gap:6px;min-width:0}
+.s-shop .prod .ph{aspect-ratio:1}
+.s-shop .prod .meta{font-size:11px;opacity:.6;letter-spacing:.06em}
+.s-shop .prod h3{font-family:var(--fb);font-size:14px;font-weight:700;margin:0}
+.s-shop .prod .yen{font-variant-numeric:tabular-nums;font-size:15px}
+.s-shop .prod .yen small{font-size:11px;opacity:.6}
+.s-shop .add{appearance:none;font:inherit;font-size:13px;border:1px solid var(--fg);background:transparent;color:var(--fg);border-radius:var(--r);padding:8px;cursor:pointer;margin-top:auto}
+.s-shop .add:hover{background:var(--fg);color:#fff}
+.s-shop .guide{background:#fff}
+.s-shop .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#222423;color:#fff;font-size:13px;padding:10px 18px;border-radius:999px;z-index:20}
+
+@media (max-width:760px){
+  .s-salon .hero .wrap,.s-build .hero .wrap,.s-cafe .hero .wrap,.s-pila .hero .wrap,.s-clinic .hero .wrap,.s-shop .hero .wrap{grid-template-columns:1fr}
+  .s-salon .ph,.s-build .hero .ph,.s-pila .hero .ph{aspect-ratio:4/3}
+  .s-cafe .hero .ph{aspect-ratio:4/3}
+  .s-clinic .news li{grid-template-columns:1fr auto}
+  .s-clinic .news li span:last-child{grid-column:1/-1}
+  .sec{padding-block:52px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<div class="site s-shop" id="v-shop">
+  <div class="notice">11,000円（税込）以上のお買い物で送料無料</div>
+  <header class="hdr"><div class="wrap">
+    <div class="logo">器と暮らし つむぎ<small>ONLINE STORE</small></div>
+    <nav class="nav"><a href="#" data-go="shop-items">商品一覧</a><a href="#" data-go="shop-guide">ご利用ガイド</a></nav>
+    <span class="cart">カート <b id="cart-n">0</b></span>
+  </div></header>
+  <section class="hero"><div class="wrap">
+    <div>
+      <p class="eyebrow">New Arrival</p>
+      <h1>毎日の食卓に、<br>産地の器を。</h1>
+      <p class="lead">波佐見、益子、小石原。全国の窯元を訪ねて選んだ器と道具を、一点ずつ検品してお届けします。</p>
+    </div>
+    <div class="ph"><span>写真：商品イメージ（差し替え）</span></div>
+  </div></section>
+  <section class="sec" data-sec="shop-items" style="padding-top:32px"><div class="wrap">
+    <h2>商品一覧</h2>
+    <div class="filters" role="group" aria-label="カテゴリで絞り込む">
+      <button class="fbtn" aria-pressed="true" data-cat="all">すべて</button>
+      <button class="fbtn" aria-pressed="false" data-cat="dish">器</button>
+      <button class="fbtn" aria-pressed="false" data-cat="glass">グラス</button>
+      <button class="fbtn" aria-pressed="false" data-cat="tool">カトラリー</button>
+      <button class="fbtn" aria-pressed="false" data-cat="cloth">布もの</button>
+    </div>
+    <div class="products" id="products"></div>
+  </div></section>
+  <section class="sec guide" data-sec="shop-guide"><div class="wrap">
+    <h2>ご利用ガイド</h2>
+    <div class="grid">
+      <div><h3>送料</h3><p>全国一律 ¥770。11,000円（税込）以上のご注文で無料です。</p></div>
+      <div><h3>お届け</h3><p>ご注文から3営業日以内に発送します。日時指定も可能です。</p></div>
+      <div><h3>お支払い</h3><p>クレジットカード、コンビニ払い、銀行振込に対応しています。</p></div>
+      <div><h3>返品・交換</h3><p>破損・不良品は到着後7日以内にご連絡ください。</p></div>
+    </div>
+  </div></section>
+  <footer class="foot"><div class="wrap"><span>© 器と暮らし つむぎ　特定商取引法に基づく表記</span><span>※架空のショップによるサンプルです</span></div></footer>
+  <div class="toast" id="toast" hidden></div>
+</div>
+
+<script>
+(function(){
+  // サイト内ナビ：該当セクションへスクロール
+  document.addEventListener("click",function(e){
+    var a=e.target.closest("[data-go]"); if(!a) return;
+    e.preventDefault();
+    var s=document.querySelector('[data-sec="'+a.dataset.go+'"]');
+    if(s){var y=s.getBoundingClientRect().top+window.scrollY-60;window.scrollTo({top:y,behavior:"smooth"})}
+  });
+
+  // フォーム（デモ）
+  document.querySelectorAll("[data-form]").forEach(function(f){
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      f.querySelector(".form-msg").textContent="これはサンプルのため、送信はされません（納品時に送信先を設定します）。";
+    });
+  });
+
+  // 通販：商品一覧・絞り込み・カート
+  var items=[
+    {n:"波佐見焼 リム皿 21cm",o:"長崎・波佐見",p:2640,c:"dish",g:"#e9ecef,#b8c3cc"},
+    {n:"益子焼 飯碗 糠白",o:"栃木・益子",p:2200,c:"dish",g:"#efe9df,#c7b79c"},
+    {n:"小石原焼 飛び鉋マグ",o:"福岡・小石原",p:3080,c:"dish",g:"#e4ddd2,#8f7a5e"},
+    {n:"有田焼 豆皿 5枚セット",o:"佐賀・有田",p:3850,c:"dish",g:"#eef1f4,#5e7f9a"},
+    {n:"手吹きグラス 220ml",o:"東京・江戸川",p:2750,c:"glass",g:"#eef4f4,#a9c6c8"},
+    {n:"真鍮カトラリー 2本組",o:"新潟・燕",p:1980,c:"tool",g:"#f1ead6,#b99a56"},
+    {n:"蚊帳ふきん 3枚組",o:"奈良",p:660,c:"cloth",g:"#f3f3ef,#cfd5cf"},
+    {n:"麻のランチョンマット",o:"滋賀・近江",p:1650,c:"cloth",g:"#ece7dd,#a69a83"}
+  ];
+  var box=document.getElementById("products"), n=0, cartEl=document.getElementById("cart-n"), toast=document.getElementById("toast"), tt;
+  function yen(v){return "¥"+v.toLocaleString("ja-JP")}
+  function render(cat){
+    box.innerHTML="";
+    items.filter(function(i){return cat==="all"||i.c===cat}).forEach(function(i){
+      var d=document.createElement("div"); d.className="prod";
+      d.innerHTML='<div class="ph" style="background:linear-gradient(150deg,'+i.g+')"><span>写真</span></div>'+
+        '<span class="meta">'+i.o+'</span><h3>'+i.n+'</h3><span class="yen">'+yen(i.p)+' <small>税込</small></span>'+
+        '<button class="add" type="button">カートに入れる</button>';
+      d.querySelector(".add").addEventListener("click",function(){
+        n++; cartEl.textContent=n;
+        toast.textContent="「"+i.n+"」をカートに追加しました"; toast.hidden=false;
+        clearTimeout(tt); tt=setTimeout(function(){toast.hidden=true},2200);
+      });
+      box.appendChild(d);
+    });
+  }
+  document.querySelectorAll(".fbtn").forEach(function(b){b.addEventListener("click",function(){
+    document.querySelectorAll(".fbtn").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+    render(b.dataset.cat);
+  })});
+  render("all");
+})();
+</script>
+</body>
+</html>

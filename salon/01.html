@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>HAIR ATELIER sora｜表参道の美容室</title>
+<meta name="description" content="HAIR ATELIER sora｜表参道の美容室（サンプルサイト）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;600&family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Maru+Gothic:wght@500;700&family=Zen+Old+Mincho:wght@600;900&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+.site :focus-visible{outline:2px solid #4a90e2;outline-offset:2px}
+/* ---- 共通パーツ（各サイトの変数で見た目が変わる） ---- */
+.site{background:var(--bg);color:var(--fg);font-family:var(--fb);line-height:1.8;font-size:15px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:18px}
+.logo{font-family:var(--fd);font-size:22px;line-height:1.2}
+.logo small{display:block;font-family:var(--fb);font-size:11px;letter-spacing:.12em;opacity:.7}
+.nav{display:flex;gap:6px 20px;flex-wrap:wrap;font-size:13px}
+.nav a{text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;text-decoration:underline}
+.sec{padding-block:72px}
+.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;font-weight:700}
+.site h1,.site h2,.site h3{font-family:var(--fd);text-wrap:balance;line-height:1.35}
+.site h2{font-size:clamp(24px,3.6vw,34px);margin:.25em 0 1em}
+.site h3{font-size:18px;margin:.6em 0 .3em}
+.lead{max-width:36em;opacity:.85}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.grid>*{min-width:0}
+.ph{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;border-radius:var(--r);display:flex;align-items:flex-end;padding:12px 14px;font-size:11px;letter-spacing:.06em;overflow:hidden}
+.ph span{background:rgba(0,0,0,.35);color:#fff;padding:2px 8px;border-radius:4px}
+.btn{display:inline-block;appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14px;padding:13px 26px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1px currentColor}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:left;vertical-align:top}
+.tbl th{font-weight:700;white-space:nowrap;width:9em}
+.foot{border-top:1px solid var(--line);font-size:12px;opacity:.8}
+.foot .wrap{padding-block:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.form{display:grid;gap:14px;max-width:560px}
+.form label{display:grid;gap:4px;font-size:13px;font-weight:700}
+.form input,.form textarea,.form select{font:inherit;font-weight:400;padding:11px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--field);color:var(--fg);width:100%}
+.form-msg{font-size:13px;color:var(--accent);font-weight:700;min-height:1.4em}
+.price-list{list-style:none;margin:0;padding:0}
+.price-list li{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.price-list .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.price-list .yen{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+.price-list small{display:block;font-size:12px;opacity:.7}
+.demo-note{font-size:11px;opacity:.6}
+
+/* ===== 1 美容室 ===== */
+.s-salon{--bg:#eef0f0;--fg:#2a2f33;--accent:#5f7a8a;--on-accent:#fff;--line:#cfd6d9;--field:#fff;--r:2px;
+  --fd:"Cormorant Garamond","Shippori Mincho",serif;--fb:"Zen Kaku Gothic New",sans-serif}
+.s-salon .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:40px 72px}
+.s-salon .hero-word{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(96px,18vw,200px);line-height:.85;margin:0;color:var(--accent);letter-spacing:-.02em}
+.s-salon .hero-txt{display:flex;gap:28px;align-items:flex-start;margin-top:24px}
+.s-salon .tate{writing-mode:vertical-rl;font-family:"Shippori Mincho",serif;font-size:20px;letter-spacing:.2em;line-height:2;margin:0}
+.s-salon .ph{background:linear-gradient(160deg,#c9d3d8,#8ea3ae 55%,#5f7a8a);aspect-ratio:3/4}
+.s-salon .menu-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:8px 56px}
+.s-salon .stylist .ph{aspect-ratio:1;background:linear-gradient(200deg,#dfe5e7,#a9b8bf)}
+.s-salon .stylist p{font-size:13px;margin:0;opacity:.8}
+.s-salon .band{background:#2a2f33;color:#eef0f0;--line:#4a5258}
+
+@media (max-width:760px){
+  .s-salon .hero .wrap,.s-build .hero .wrap,.s-cafe .hero .wrap,.s-pila .hero .wrap,.s-clinic .hero .wrap,.s-shop .hero .wrap{grid-template-columns:1fr}
+  .s-salon .ph,.s-build .hero .ph,.s-pila .hero .ph{aspect-ratio:4/3}
+  .s-cafe .hero .ph{aspect-ratio:4/3}
+  .s-clinic .news li{grid-template-columns:1fr auto}
+  .s-clinic .news li span:last-child{grid-column:1/-1}
+  .sec{padding-block:52px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<div class="site s-salon" id="v-salon">
+  <header class="hdr"><div class="wrap">
+    <div class="logo">HAIR ATELIER sora<small>表参道の美容室</small></div>
+    <nav class="nav"><a href="#" data-go="salon-menu">メニュー</a><a href="#" data-go="salon-staff">スタイリスト</a><a href="#" data-go="salon-info">店舗情報</a></nav>
+  </div></header>
+  <section class="hero"><div class="wrap">
+    <div>
+      <p class="hero-word">sora</p>
+      <div class="hero-txt">
+        <p class="tate">空のように、軽やかな髪へ。</p>
+        <div>
+          <p class="lead">骨格と髪質を見て、乾かすだけでまとまるカットを。表参道駅から徒歩3分、席数4つの小さなサロンです。</p>
+          <a class="btn" href="#" data-go="salon-info">Web予約はこちら</a>
+        </div>
+      </div>
+    </div>
+    <div class="ph"><span>写真：店内・スタイル（差し替え）</span></div>
+  </div></section>
+  <section class="sec" data-sec="salon-menu"><div class="wrap">
+    <p class="eyebrow">Menu</p><h2>メニュー・料金</h2>
+    <div class="menu-cols">
+      <ul class="price-list">
+        <li><span>カット<small>シャンプー・ブロー込み</small></span><span class="dots"></span><span class="yen">¥6,600</span></li>
+        <li><span>カット＋カラー</span><span class="dots"></span><span class="yen">¥13,200</span></li>
+        <li><span>カット＋パーマ</span><span class="dots"></span><span class="yen">¥14,300</span></li>
+      </ul>
+      <ul class="price-list">
+        <li><span>縮毛矯正<small>カット込み・ロング＋¥2,200</small></span><span class="dots"></span><span class="yen">¥22,000</span></li>
+        <li><span>ヘッドスパ（30分）</span><span class="dots"></span><span class="yen">¥4,400</span></li>
+        <li><span>トリートメント</span><span class="dots"></span><span class="yen">¥3,300〜</span></li>
+      </ul>
+    </div>
+    <p class="demo-note">表示価格はすべて税込です。</p>
+  </div></section>
+  <section class="sec band" data-sec="salon-staff"><div class="wrap">
+    <p class="eyebrow" style="color:#a9bcc7">Stylist</p><h2>スタイリスト</h2>
+    <div class="grid">
+      <div class="stylist"><div class="ph"><span>写真</span></div><h3>佐藤 みお</h3><p>代表／経験15年。ショートと前髪カットが得意。</p></div>
+      <div class="stylist"><div class="ph"><span>写真</span></div><h3>高橋 れん</h3><p>カラー担当。透明感のあるブリーチなしカラー。</p></div>
+      <div class="stylist"><div class="ph"><span>写真</span></div><h3>中村 ゆい</h3><p>縮毛矯正と髪質改善トリートメントを担当。</p></div>
+    </div>
+  </div></section>
+  <section class="sec" data-sec="salon-info"><div class="wrap">
+    <p class="eyebrow">Salon</p><h2>店舗情報</h2>
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>営業時間</th><td>平日 10:00–20:00／土日祝 9:00–19:00</td></tr>
+      <tr><th>定休日</th><td>毎週火曜日・第3水曜日</td></tr>
+      <tr><th>住所</th><td>東京都渋谷区神宮前4-00-00 ソラビル2F</td></tr>
+      <tr><th>アクセス</th><td>東京メトロ 表参道駅 A2出口より徒歩3分</td></tr>
+      <tr><th>電話</th><td>03-0000-0000</td></tr>
+    </table></div>
+    <p style="margin-top:28px"><a class="btn" href="#" data-go="salon-info">Web予約（24時間受付）</a></p>
+  </div></section>
+  <footer class="foot"><div class="wrap"><span>© HAIR ATELIER sora</span><span>※架空の店舗によるサンプルです</span></div></footer>
+</div>
+
+<script>
+(function(){
+  // サイト内ナビ：該当セクションへスクロール
+  document.addEventListener("click",function(e){
+    var a=e.target.closest("[data-go]"); if(!a) return;
+    e.preventDefault();
+    var s=document.querySelector('[data-sec="'+a.dataset.go+'"]');
+    if(s){var y=s.getBoundingClientRect().top+window.scrollY-60;window.scrollTo({top:y,behavior:"smooth"})}
+  });
+
+  // フォーム（デモ）
+  document.querySelectorAll("[data-form]").forEach(function(f){
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      f.querySelector(".form-msg").textContent="これはサンプルのため、送信はされません（納品時に送信先を設定します）。";
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

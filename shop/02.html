@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MAISON TSUMUGI｜工芸と器のセレクトストア</title>
+<meta name="description" content="受け継がれる手仕事を、食卓へ。 MAISON TSUMUGI｜工芸と器のセレクトストア（サンプルサイト・高級感）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Shippori+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;-webkit-text-size-adjust:100%}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+h1,h2,h3{word-break:auto-phrase}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+section[id]{scroll-margin-top:72px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.ph{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;display:flex;align-items:flex-end;padding:12px 14px;font-size:11px;letter-spacing:.06em;overflow:hidden}
+.ph.sq{aspect-ratio:1}
+.ph span{background:rgba(0,0,0,.38);color:#fff;padding:2px 8px;border-radius:3px}
+.tscroll{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse}
+.tbl th,.tbl td{text-align:left;vertical-align:top;padding:14px 10px;border-bottom:1px solid var(--line)}
+.tbl th{white-space:nowrap;width:9em;font-weight:600}
+.cards3{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.cards4{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.cards3>*,.cards4>*{min-width:0}
+.svcs{display:grid;gap:0 48px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.svc{padding:22px 0;border-bottom:1px solid var(--line)}
+.svc h3,.feat h3,.gitem h3,.staff h3,.work h3{margin:.2em 0 .3em}
+.svc p,.feat p,.gitem p,.staff p,.work p{margin:0;font-size:.92em;opacity:.85}
+.staff .role{font-size:12px;opacity:.65;margin:0 0 4px}
+.pgroups{display:grid;gap:12px 56px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.plist{list-style:none;margin:0;padding:0}
+.plist li{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.plist .dots{flex:1;min-width:16px;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+.plist small{display:block;font-size:12px;opacity:.65}
+.yen{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+.note{font-size:12px;opacity:.65;margin-top:14px}
+.plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+.plan{display:flex;flex-direction:column;gap:4px;padding:26px 22px}
+.pl-amt{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums}
+.plan small{font-size:12px;opacity:.7}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.stat{background:var(--bg);padding:24px 20px}
+.stat b{display:block;font-size:32px;font-variant-numeric:tabular-nums;color:var(--accent);line-height:1.2}
+.stat span{font-size:12px;opacity:.75}
+.flow{list-style:none;margin:0;padding:0;counter-reset:f}
+.flow li{counter-increment:f;display:grid;grid-template-columns:3.2em 1fr;column-gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.flow li::before{content:counter(f,decimal-leading-zero);grid-row:span 2;color:var(--accent);font-size:22px;font-weight:700;line-height:1.3}
+.flow span{font-size:.9em;opacity:.8}
+.hours table{width:100%;border-collapse:collapse;text-align:center;font-size:14px}
+.hours th,.hours td{padding:11px 4px;border-bottom:1px solid var(--line)}
+.hours td.o{color:var(--accent);font-weight:700} .hours td.x{opacity:.35}
+.hours p{font-size:13px;margin:12px 0 0}
+.news{list-style:none;margin:0;padding:0}
+.news li{display:grid;grid-template-columns:7.5em auto 1fr;gap:12px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.news time{font-variant-numeric:tabular-nums;font-size:14px;opacity:.7}
+.tag{font-size:11px;padding:2px 8px;white-space:nowrap;border:1px solid currentColor;border-radius:3px}
+.nums{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr))}
+.nums b{display:block;font-size:48px;line-height:1.1;font-variant-numeric:tabular-nums;font-weight:500}
+.nums b small{font-size:16px;margin-left:4px}
+.nums span{font-size:12px;opacity:.7}
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 22px 24px}
+.tl li::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl time{display:block;font-weight:600;font-variant-numeric:tabular-nums}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.fbtn{appearance:none;font:inherit;font-size:13px;padding:6px 16px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.fbtn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.products{display:grid;gap:28px 20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr))}
+.prod{display:flex;flex-direction:column;gap:6px;min-width:0}
+.prod .meta{font-size:11px;opacity:.6;letter-spacing:.06em}
+.prod h3{font-size:14px;margin:0}
+.prod .yen small{font-size:11px;opacity:.6;font-weight:400}
+.add{appearance:none;font:inherit;font-size:13px;padding:9px;margin-top:auto;cursor:pointer;background:transparent;color:var(--fg);border:1px solid var(--fg)}
+.add:hover{background:var(--fg);color:var(--bg)}
+.cart{display:inline-flex;align-items:center;gap:8px;font-size:13px}
+.cart b{background:var(--accent);color:var(--bg);border-radius:999px;min-width:22px;text-align:center;font-size:12px;padding:1px 6px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#222;color:#fff;font-size:13px;padding:10px 18px;border-radius:999px;z-index:50;max-width:90vw}
+.form{display:grid;gap:14px;max-width:560px}
+.form label{display:grid;gap:5px;font-size:13px;font-weight:600}
+.form input,.form select,.form textarea{font:inherit;font-weight:400;padding:12px;width:100%;border:1px solid var(--line);background:var(--field);color:var(--fg)}
+.form-msg{font-size:13px;min-height:1.4em;color:var(--accent);font-weight:600}
+.btn{display:inline-block;appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:14px;padding:14px 28px;text-decoration:none}
+.foot-note{font-size:11px;opacity:.6}
+@media (max-width:760px){.news li{grid-template-columns:1fr auto} .news li span:last-child{grid-column:1/-1}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+
+.luxe{--bg:#111111;--fg:#ece7df;--accent:#c4aa7f;--line:rgba(236,231,223,.16);--field:rgba(255,255,255,.04);
+ background:var(--bg);color:var(--fg);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:400;line-height:1.9;font-size:15px;letter-spacing:.03em}
+.luxe h1,.luxe h2,.luxe h3{font-family:"Shippori Mincho",serif;font-weight:600;text-wrap:balance;line-height:1.5}
+.ship{text-align:center;font-size:12px;padding:7px 16px;color:var(--accent);border-bottom:1px solid var(--line)}
+.hdr{position:absolute;left:0;right:0;z-index:5}
+.ship+.hdr{top:36px}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 28px;flex-wrap:wrap;padding-block:22px}
+.logo{font-family:"Cormorant Garamond","Shippori Mincho",serif;font-size:24px;font-weight:600;text-decoration:none;letter-spacing:.06em;line-height:1.2}
+.logo small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:10px;letter-spacing:.2em;opacity:.7}
+.nav{display:flex;gap:6px 26px;flex-wrap:wrap;font-size:12px;letter-spacing:.14em}
+.nav a{text-decoration:none;opacity:.8} .nav a:hover{opacity:1;color:var(--accent)}
+.hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;overflow:hidden}
+.hero-ph{position:absolute;inset:0;background:linear-gradient(160deg,var(--p1),var(--p2));display:flex;align-items:flex-start;justify-content:flex-end;padding:110px 18px 0}
+.hero-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15) 40%,var(--bg))}
+.hero-ph span{position:relative;z-index:1;font-size:11px;background:rgba(0,0,0,.35);color:#fff;padding:2px 8px}
+.hero-in{position:relative;z-index:2;padding-block:120px 72px;width:100%}
+.hero-sub{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:20px;color:var(--accent);margin:0}
+.hero h1{font-size:clamp(34px,6.4vw,68px);margin:.15em 0 .45em;max-width:12em}
+.lead{max-width:34em;opacity:.85}
+.btn{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);letter-spacing:.2em;font-weight:500;margin-top:18px}
+.btn:hover{background:var(--accent);color:var(--bg)}
+.sec{padding-block:96px}
+.sec+.sec{border-top:1px solid var(--line)}
+.sh{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:56px}
+.sh .en{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:var(--accent)}
+.sh h2{font-size:clamp(22px,3.2vw,30px);margin:.1em 0 0;letter-spacing:.12em}
+.sh::after{content:"";width:40px;height:1px;background:var(--accent);margin-top:20px}
+.zig{display:grid;gap:64px}
+.zrow{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.zrow:nth-child(even) .ph{order:2}
+.zno{font-family:"Cormorant Garamond",serif;font-size:44px;color:var(--accent);line-height:1}
+.ztxt h3{font-size:22px}
+.ztxt p{opacity:.8}
+.svc h3{font-size:18px}
+.svc h3::before{content:"— ";color:var(--accent)}
+.pgroup h3{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--accent);letter-spacing:.08em}
+.yen{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:600}
+.plan{border:1px solid var(--line)}
+.plan.pick{border-color:var(--accent)}
+.pl-amt{font-family:"Cormorant Garamond",serif;color:var(--accent);font-size:36px}
+.stat b,.nums b{font-family:"Cormorant Garamond",serif;color:var(--accent)}
+.flow li::before{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:500}
+.hours{border:1px solid var(--line);padding:24px}
+.tag{color:var(--accent)}
+.tl time{font-family:"Cormorant Garamond",serif;font-size:20px;color:var(--accent)}
+.fbtn{border-radius:0;letter-spacing:.1em}
+.fbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.prod .yen{font-size:18px}
+.add{border-color:var(--line);letter-spacing:.1em} .add:hover{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.gitem{border-top:1px solid var(--accent);padding-top:16px}
+.form{margin:0 auto}
+.form input,.form select,.form textarea{border-width:0 0 1px;padding-inline:0;background:transparent}
+.form select option{background:var(--bg)}
+.form .btn{width:100%}
+.foot{border-top:1px solid var(--line)}
+.foot .wrap{padding-block:44px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.flogo{font-family:"Cormorant Garamond","Shippori Mincho",serif;font-size:26px;letter-spacing:.08em}
+@media (max-width:760px){.zrow{grid-template-columns:1fr;gap:20px} .zrow:nth-child(even) .ph{order:0} .sec{padding-block:68px} .hdr{position:relative} .ship+.hdr{top:0} .hero{min-height:0} .hero-in{padding-block:80px 56px}}
+
+</style>
+</head>
+<body class="luxe">
+<div class="ship">11,000円（税込）以上のお買い物で送料無料</div><header class="hdr"><div class="wrap">
+<a class="logo" href="#top">MAISON TSUMUGI<small>工芸と器のセレクトストア</small></a>
+<nav class="nav"><a href="#products">商品一覧</a><a href="#guide">ご利用ガイド</a></nav><span class="cart">カート <b id="cart-n">0</b></span></div></header>
+<section class="hero" id="top" style="--p1:#e7e2d8;--p2:#6f7f8c">
+<div class="hero-ph"><span>写真：メインビジュアル（差し替え）</span></div>
+<div class="wrap hero-in"><p class="hero-sub">工芸と器のセレクトストア</p><h1>受け継がれる手仕事を、食卓へ。</h1><p class="lead">波佐見、益子、小石原。全国の窯元を訪ねて選んだ器と道具を、一点ずつ検品してお届けします。</p>
+<a class="btn" href="#products">商品を見る</a></div></section>
+<section id="features" class="sec"><div class="wrap">
+<div class="sh"><span class="en">Concept</span><h2>私たちの特徴</h2></div><div class="zig"><div class="zrow"><div class="ph " style="background:linear-gradient(150deg,#e7e2d8,#6f7f8c)"><span>写真：商品イメージ（差し替え）</span></div><div class="ztxt"><span class="zno">01</span><h3>一点ずつ検品</h3><p>釉薬のムラや欠けがないか、発送前にスタッフが確認します。</p></div></div><div class="zrow"><div class="ph " style="background:linear-gradient(200deg,#c3b9a6,#6f7f8c)"><span>写真：窯元（差し替え）</span></div><div class="ztxt"><span class="zno">02</span><h3>ギフト包装 無料</h3><p>のし・メッセージカードにも対応しています。</p></div></div><div class="zrow"><div class="ph " style="background:linear-gradient(120deg,#c3b9a6,#e7e2d8)"><span>写真：食卓（差し替え）</span></div><div class="ztxt"><span class="zno">03</span><h3>3営業日以内に発送</h3><p>日時指定も承ります。</p></div></div></div></div></section><section id="products" class="sec"><div class="wrap">
+<div class="sh"><span class="en">Items</span><h2>商品一覧</h2></div><div class="filters" role="group" aria-label="カテゴリで絞り込む"><button type="button" class="fbtn" data-cat="all" aria-pressed="true">すべて</button><button type="button" class="fbtn" data-cat="dish" aria-pressed="false">器</button><button type="button" class="fbtn" data-cat="glass" aria-pressed="false">グラス</button><button type="button" class="fbtn" data-cat="tool" aria-pressed="false">カトラリー</button><button type="button" class="fbtn" data-cat="cloth" aria-pressed="false">布もの</button></div><div class="products" id="product-grid"></div></div></section><section id="guide" class="sec"><div class="wrap">
+<div class="sh"><span class="en">Guide</span><h2>ご利用ガイド</h2></div><div class="cards4"><div class="gitem"><h3>送料</h3><p>全国一律 ¥770。11,000円（税込）以上で無料です。</p></div><div class="gitem"><h3>お届け</h3><p>ご注文から3営業日以内に発送します。</p></div><div class="gitem"><h3>お支払い</h3><p>クレジットカード、コンビニ払い、銀行振込。</p></div><div class="gitem"><h3>返品・交換</h3><p>破損・不良品は到着後7日以内にご連絡ください。</p></div></div></div></section>
+<footer class="foot"><div class="wrap"><span class="flogo">MAISON TSUMUGI</span><span class="foot-note">© MAISON TSUMUGI　※架空の店舗・会社によるサンプルサイトです</span></div></footer>
+<div class="toast" id="toast" hidden></div>
+<script>
+(function(){
+  document.querySelectorAll("[data-form]").forEach(function(f){
+    f.addEventListener("submit",function(e){e.preventDefault();
+      f.querySelector(".form-msg").textContent="これはサンプルのため、送信はされません（納品時に送信先を設定します）。";});
+  });
+  var items=[["波佐見焼 リム皿 21cm", "長崎・波佐見", 2640, "dish"], ["益子焼 飯碗", "栃木・益子", 2200, "dish"], ["小石原焼 飛び鉋マグ", "福岡・小石原", 3080, "dish"], ["有田焼 豆皿 5枚セット", "佐賀・有田", 3850, "dish"], ["手吹きグラス 220ml", "東京・江戸川", 2750, "glass"], ["真鍮カトラリー 2本組", "新潟・燕", 1980, "tool"], ["蚊帳ふきん 3枚組", "奈良", 660, "cloth"], ["麻のランチョンマット", "滋賀・近江", 1650, "cloth"]], box=document.getElementById("product-grid"), n=0, cartEl=document.getElementById("cart-n"), toast=document.getElementById("toast"), tt;
+  var grad=["linear-gradient(150deg,#e7e2d8,#6f7f8c)", "linear-gradient(200deg,#c3b9a6,#6f7f8c)", "linear-gradient(120deg,#c3b9a6,#e7e2d8)", "linear-gradient(170deg,#eee,#c3b9a6)"];
+  function render(cat){
+    box.innerHTML="";
+    items.filter(function(i){return cat==="all"||i[3]===cat}).forEach(function(i,idx){
+      var d=document.createElement("div"); d.className="prod";
+      d.innerHTML='<div class="ph sq" style="background:'+grad[idx%grad.length]+'"><span>写真</span></div><span class="meta">'+i[1]+'</span><h3>'+i[0]+'</h3><span class="yen">¥'+i[2].toLocaleString("ja-JP")+' <small>税込</small></span><button class="add" type="button">カートに入れる</button>';
+      d.querySelector(".add").addEventListener("click",function(){
+        n++; cartEl.textContent=n; toast.textContent="「"+i[0]+"」をカートに追加しました"; toast.hidden=false;
+        clearTimeout(tt); tt=setTimeout(function(){toast.hidden=true},2200);
+      });
+      box.appendChild(d);
+    });
+  }
+  document.querySelectorAll(".fbtn").forEach(function(b){b.addEventListener("click",function(){
+    document.querySelectorAll(".fbtn").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+    render(b.dataset.cat);
+  })});
+  render("all");
+
+})();
+</script>
+</body>
+</html>

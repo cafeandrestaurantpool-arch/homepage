@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>さくら台内科クリニック｜世田谷区桜丘</title>
+<meta name="description" content="さくら台内科クリニック｜世田谷区桜丘（サンプルサイト）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;600&family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Maru+Gothic:wght@500;700&family=Zen+Old+Mincho:wght@600;900&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+.site :focus-visible{outline:2px solid #4a90e2;outline-offset:2px}
+/* ---- 共通パーツ（各サイトの変数で見た目が変わる） ---- */
+.site{background:var(--bg);color:var(--fg);font-family:var(--fb);line-height:1.8;font-size:15px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:18px}
+.logo{font-family:var(--fd);font-size:22px;line-height:1.2}
+.logo small{display:block;font-family:var(--fb);font-size:11px;letter-spacing:.12em;opacity:.7}
+.nav{display:flex;gap:6px 20px;flex-wrap:wrap;font-size:13px}
+.nav a{text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;text-decoration:underline}
+.sec{padding-block:72px}
+.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;font-weight:700}
+.site h1,.site h2,.site h3{font-family:var(--fd);text-wrap:balance;line-height:1.35}
+.site h2{font-size:clamp(24px,3.6vw,34px);margin:.25em 0 1em}
+.site h3{font-size:18px;margin:.6em 0 .3em}
+.lead{max-width:36em;opacity:.85}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.grid>*{min-width:0}
+.ph{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;border-radius:var(--r);display:flex;align-items:flex-end;padding:12px 14px;font-size:11px;letter-spacing:.06em;overflow:hidden}
+.ph span{background:rgba(0,0,0,.35);color:#fff;padding:2px 8px;border-radius:4px}
+.btn{display:inline-block;appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14px;padding:13px 26px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1px currentColor}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:left;vertical-align:top}
+.tbl th{font-weight:700;white-space:nowrap;width:9em}
+.foot{border-top:1px solid var(--line);font-size:12px;opacity:.8}
+.foot .wrap{padding-block:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.form{display:grid;gap:14px;max-width:560px}
+.form label{display:grid;gap:4px;font-size:13px;font-weight:700}
+.form input,.form textarea,.form select{font:inherit;font-weight:400;padding:11px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--field);color:var(--fg);width:100%}
+.form-msg{font-size:13px;color:var(--accent);font-weight:700;min-height:1.4em}
+.price-list{list-style:none;margin:0;padding:0}
+.price-list li{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.price-list .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.price-list .yen{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+.price-list small{display:block;font-size:12px;opacity:.7}
+.demo-note{font-size:11px;opacity:.6}
+
+/* ===== 5 クリニック ===== */
+.s-clinic{--bg:#ffffff;--fg:#1b2a35;--accent:#17707c;--on-accent:#fff;--line:#d7e3e6;--field:#fff;--r:8px;
+  --fd:"BIZ UDPGothic",sans-serif;--fb:"BIZ UDPGothic",sans-serif;font-size:16px}
+.s-clinic .topline{background:var(--accent);color:#fff;font-size:13px}
+.s-clinic .topline .wrap{padding-block:6px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.s-clinic .hero{background:#eaf4f5}
+.s-clinic .hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;padding-block:44px;align-items:start}
+.s-clinic .hero h1{font-size:clamp(26px,4vw,38px);margin:.2em 0 .4em}
+.s-clinic .depts{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 24px}
+.s-clinic .depts span{background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px 12px;font-size:14px;font-weight:700}
+.s-clinic .tel{font-size:clamp(26px,4vw,34px);font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.s-clinic .hours{background:#fff;border-radius:12px;padding:20px;border:1px solid var(--line)}
+.s-clinic .hours table{width:100%;border-collapse:collapse;font-size:14px;text-align:center}
+.s-clinic .hours th,.s-clinic .hours td{border-bottom:1px solid var(--line);padding:10px 4px}
+.s-clinic .hours thead th{background:#f3f8f9;font-weight:700}
+.s-clinic .hours .o{color:var(--accent);font-weight:700}
+.s-clinic .hours .x{color:#a8b4b9}
+.s-clinic .hours p{font-size:13px;margin:12px 0 0}
+.s-clinic .news{list-style:none;margin:0;padding:0}
+.s-clinic .news li{display:grid;grid-template-columns:7.5em auto 1fr;gap:12px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.s-clinic .news time{font-variant-numeric:tabular-nums;font-size:14px;opacity:.7}
+.s-clinic .tag{font-size:11px;padding:2px 8px;border-radius:4px;background:#eaf4f5;color:var(--accent);font-weight:700;white-space:nowrap}
+.s-clinic .tag.warn{background:#fdf0e3;color:#a2531a}
+.s-clinic .svc{border:1px solid var(--line);border-radius:12px;padding:22px}
+.s-clinic .svc p{font-size:14px;margin:0;opacity:.85}
+
+@media (max-width:760px){
+  .s-salon .hero .wrap,.s-build .hero .wrap,.s-cafe .hero .wrap,.s-pila .hero .wrap,.s-clinic .hero .wrap,.s-shop .hero .wrap{grid-template-columns:1fr}
+  .s-salon .ph,.s-build .hero .ph,.s-pila .hero .ph{aspect-ratio:4/3}
+  .s-cafe .hero .ph{aspect-ratio:4/3}
+  .s-clinic .news li{grid-template-columns:1fr auto}
+  .s-clinic .news li span:last-child{grid-column:1/-1}
+  .sec{padding-block:52px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<div class="site s-clinic" id="v-clinic">
+  <div class="topline"><div class="wrap"><span>発熱・風邪症状の方は、ご来院前にお電話ください</span><span>駐車場4台あり</span></div></div>
+  <header class="hdr"><div class="wrap">
+    <div class="logo" style="font-weight:700">さくら台内科クリニック<small>内科・小児科・アレルギー科</small></div>
+    <nav class="nav"><a href="#" data-go="cl-news">お知らせ</a><a href="#" data-go="cl-svc">診療案内</a><a href="#" data-go="cl-access">アクセス</a></nav>
+  </div></header>
+  <section class="hero"><div class="wrap">
+    <div>
+      <h1>地域のかかりつけ医として、<br>ご家族みんなの健康を。</h1>
+      <div class="depts"><span>内科</span><span>小児科</span><span>アレルギー科</span><span>発熱外来</span></div>
+      <p style="margin:0;font-size:14px">ご予約・お問い合わせ</p>
+      <p class="tel" style="margin:0 0 16px">03-0000-0000</p>
+      <a class="btn" href="#" data-go="cl-access">Web順番受付</a>
+    </div>
+    <div class="hours">
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日祝</th></tr></thead>
+        <tbody>
+          <tr><th>9:00–12:30</th><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="x">／</td></tr>
+          <tr><th>15:00–18:30</th><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="x">／</td><td class="o">●</td><td class="x">／</td><td class="x">／</td></tr>
+        </tbody>
+      </table></div>
+      <p>休診日：木曜午後・土曜午後・日曜・祝日<br>受付は診療終了の15分前までです。</p>
+    </div>
+  </div></section>
+  <section class="sec" data-sec="cl-news"><div class="wrap">
+    <h2>お知らせ</h2>
+    <ul class="news">
+      <li><time>2026.10.20</time><span class="tag">予防接種</span><span>インフルエンザワクチンの予約受付を開始しました。</span></li>
+      <li><time>2026.10.01</time><span class="tag warn">休診</span><span>11月3日（祝）は休診いたします。</span></li>
+      <li><time>2026.09.15</time><span class="tag">お知らせ</span><span>マイナ保険証をご利用いただけます。</span></li>
+    </ul>
+  </div></section>
+  <section class="sec" data-sec="cl-svc" style="background:#f6fafb"><div class="wrap">
+    <h2>診療案内</h2>
+    <div class="grid">
+      <div class="svc"><h3>一般内科</h3><p>風邪、発熱、腹痛、頭痛など、日常の体調不良を幅広く診察します。</p></div>
+      <div class="svc"><h3>小児科</h3><p>生後すぐのお子さまから診察します。乳幼児健診も行っています。</p></div>
+      <div class="svc"><h3>生活習慣病</h3><p>高血圧、糖尿病、脂質異常症の継続的な管理を行います。</p></div>
+      <div class="svc"><h3>予防接種・健康診断</h3><p>各種ワクチン、区の特定健診、企業健診に対応しています。</p></div>
+    </div>
+  </div></section>
+  <section class="sec" data-sec="cl-access"><div class="wrap">
+    <h2>アクセス</h2>
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>住所</th><td>東京都世田谷区桜丘0-0-0 さくら台メディカルビル1F</td></tr>
+      <tr><th>最寄駅</th><td>小田急線 千歳船橋駅より徒歩5分</td></tr>
+      <tr><th>駐車場</th><td>4台（ビル裏手）</td></tr>
+      <tr><th>院長</th><td>山本 健一（日本内科学会 総合内科専門医）</td></tr>
+    </table></div>
+  </div></section>
+  <footer class="foot"><div class="wrap"><span>© さくら台内科クリニック</span><span>※架空の医療機関によるサンプルです</span></div></footer>
+</div>
+
+<script>
+(function(){
+  // サイト内ナビ：該当セクションへスクロール
+  document.addEventListener("click",function(e){
+    var a=e.target.closest("[data-go]"); if(!a) return;
+    e.preventDefault();
+    var s=document.querySelector('[data-sec="'+a.dataset.go+'"]');
+    if(s){var y=s.getBoundingClientRect().top+window.scrollY-60;window.scrollTo({top:y,behavior:"smooth"})}
+  });
+
+  // フォーム（デモ）
+  document.querySelectorAll("[data-form]").forEach(function(f){
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      f.querySelector(".form-msg").textContent="これはサンプルのため、送信はされません（納品時に送信先を設定します）。";
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

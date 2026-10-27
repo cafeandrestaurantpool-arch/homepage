@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>株式会社ネクスリンク｜中小企業のDX支援</title>
+<meta name="description" content="株式会社ネクスリンク｜中小企業のDX支援（サンプルサイト）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;600&family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Maru+Gothic:wght@500;700&family=Zen+Old+Mincho:wght@600;900&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+.site :focus-visible{outline:2px solid #4a90e2;outline-offset:2px}
+/* ---- 共通パーツ（各サイトの変数で見た目が変わる） ---- */
+.site{background:var(--bg);color:var(--fg);font-family:var(--fb);line-height:1.8;font-size:15px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:18px}
+.logo{font-family:var(--fd);font-size:22px;line-height:1.2}
+.logo small{display:block;font-family:var(--fb);font-size:11px;letter-spacing:.12em;opacity:.7}
+.nav{display:flex;gap:6px 20px;flex-wrap:wrap;font-size:13px}
+.nav a{text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;text-decoration:underline}
+.sec{padding-block:72px}
+.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;font-weight:700}
+.site h1,.site h2,.site h3{font-family:var(--fd);text-wrap:balance;line-height:1.35}
+.site h2{font-size:clamp(24px,3.6vw,34px);margin:.25em 0 1em}
+.site h3{font-size:18px;margin:.6em 0 .3em}
+.lead{max-width:36em;opacity:.85}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.grid>*{min-width:0}
+.ph{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;border-radius:var(--r);display:flex;align-items:flex-end;padding:12px 14px;font-size:11px;letter-spacing:.06em;overflow:hidden}
+.ph span{background:rgba(0,0,0,.35);color:#fff;padding:2px 8px;border-radius:4px}
+.btn{display:inline-block;appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14px;padding:13px 26px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1px currentColor}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:left;vertical-align:top}
+.tbl th{font-weight:700;white-space:nowrap;width:9em}
+.foot{border-top:1px solid var(--line);font-size:12px;opacity:.8}
+.foot .wrap{padding-block:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.form{display:grid;gap:14px;max-width:560px}
+.form label{display:grid;gap:4px;font-size:13px;font-weight:700}
+.form input,.form textarea,.form select{font:inherit;font-weight:400;padding:11px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--field);color:var(--fg);width:100%}
+.form-msg{font-size:13px;color:var(--accent);font-weight:700;min-height:1.4em}
+.price-list{list-style:none;margin:0;padding:0}
+.price-list li{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.price-list .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.price-list .yen{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+.price-list small{display:block;font-size:12px;opacity:.7}
+.demo-note{font-size:11px;opacity:.6}
+
+/* ===== 7 会社 ===== */
+.s-corp{--bg:#ffffff;--fg:#14213a;--accent:#2a8fc9;--on-accent:#fff;--line:#dfe4ec;--field:#fff;--r:6px;
+  --fd:"Jost","Zen Kaku Gothic New",sans-serif;--fb:"Zen Kaku Gothic New",sans-serif}
+.s-corp .hdr,.s-corp .hero{background:#0f1b2e;color:#eef2f8}
+.s-corp .hero .wrap{padding-block:56px 72px}
+.s-corp .hero h1{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:clamp(32px,6vw,62px);margin:.2em 0 .4em;max-width:14em;letter-spacing:.01em}
+.s-corp .hero h1 em{font-style:normal;color:#6cc3f0}
+.s-corp .hero .lead{color:#c3cddc}
+.s-corp .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:20px;margin-top:48px;border-top:1px solid #2a3a55;padding-top:28px}
+.s-corp .nums b{display:block;font-family:"Jost",sans-serif;font-size:44px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.s-corp .nums b small{font-size:16px;margin-left:4px}
+.s-corp .nums span{font-size:12px;color:#93a2b8}
+.s-corp .svc{border-top:3px solid var(--fg);padding-top:18px}
+.s-corp .svc .no{font-family:"Jost",sans-serif;font-size:13px;color:var(--accent);font-weight:600;letter-spacing:.1em}
+.s-corp .svc p{font-size:14px;margin:0;opacity:.85}
+.s-corp .tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.s-corp .tl li{position:relative;padding:0 0 22px 24px}
+.s-corp .tl li::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.s-corp .tl time{font-family:"Jost",sans-serif;font-weight:600;font-variant-numeric:tabular-nums;display:block}
+.s-corp .alt{background:#f4f6fa}
+.s-corp .recruit{background:var(--accent);color:#fff}
+.s-corp .recruit .wrap{padding-block:48px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.s-corp .recruit .btn{background:#fff;color:#0f1b2e}
+
+@media (max-width:760px){
+  .s-salon .hero .wrap,.s-build .hero .wrap,.s-cafe .hero .wrap,.s-pila .hero .wrap,.s-clinic .hero .wrap,.s-shop .hero .wrap{grid-template-columns:1fr}
+  .s-salon .ph,.s-build .hero .ph,.s-pila .hero .ph{aspect-ratio:4/3}
+  .s-cafe .hero .ph{aspect-ratio:4/3}
+  .s-clinic .news li{grid-template-columns:1fr auto}
+  .s-clinic .news li span:last-child{grid-column:1/-1}
+  .sec{padding-block:52px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<div class="site s-corp" id="v-corp">
+  <header class="hdr"><div class="wrap">
+    <div class="logo" style="font-family:'Jost',sans-serif;font-weight:600">NEXLINK<small>株式会社ネクスリンク</small></div>
+    <nav class="nav"><a href="#" data-go="corp-svc">事業内容</a><a href="#" data-go="corp-about">会社概要</a><a href="#" data-go="corp-history">沿革</a><a href="#" data-go="corp-contact">お問い合わせ</a></nav>
+  </div></header>
+  <section class="hero"><div class="wrap">
+    <p class="eyebrow" style="color:#6cc3f0">IT Consulting &amp; Development</p>
+    <h1>中小企業のDXを、<em>現場から</em>。</h1>
+    <p class="lead">紙とExcelで回っている業務を、無理なくデジタルへ。現場の声を聞きながら、使い続けられる仕組みを一緒につくります。</p>
+    <div class="nums">
+      <div><b>480<small>社</small></b><span>累計支援企業数</span></div>
+      <div><b>94<small>%</small></b><span>保守契約の継続率</span></div>
+      <div><b>62<small>名</small></b><span>社員数（2026年4月）</span></div>
+    </div>
+  </div></section>
+  <section class="sec" data-sec="corp-svc"><div class="wrap">
+    <p class="eyebrow">Service</p><h2>事業内容</h2>
+    <div class="grid">
+      <div class="svc"><span class="no">SERVICE 01</span><h3>業務システム開発</h3><p>受発注、在庫、勤怠など、業務に合わせたシステムを設計・開発します。</p></div>
+      <div class="svc"><span class="no">SERVICE 02</span><h3>クラウド導入支援</h3><p>Google Workspace、kintoneなどの導入から社内定着までを支援します。</p></div>
+      <div class="svc"><span class="no">SERVICE 03</span><h3>IT顧問サービス</h3><p>月額制で、IT全般の相談窓口とセキュリティ対策を担います。</p></div>
+    </div>
+  </div></section>
+  <section class="sec alt" data-sec="corp-about"><div class="wrap">
+    <p class="eyebrow">Company</p><h2>会社概要</h2>
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>社名</th><td>株式会社ネクスリンク（NEXLINK Inc.）</td></tr>
+      <tr><th>設立</th><td>2011年4月</td></tr>
+      <tr><th>資本金</th><td>3,000万円</td></tr>
+      <tr><th>代表者</th><td>代表取締役 山田 太郎</td></tr>
+      <tr><th>所在地</th><td>〒101-0000 東京都千代田区神田○○町0-0-0 ネクスビル5F</td></tr>
+      <tr><th>事業内容</th><td>業務システムの受託開発、クラウドサービス導入支援、ITコンサルティング</td></tr>
+      <tr><th>取引銀行</th><td>○○銀行 神田支店</td></tr>
+    </table></div>
+  </div></section>
+  <section class="sec" data-sec="corp-history"><div class="wrap">
+    <p class="eyebrow">History</p><h2>沿革</h2>
+    <ol class="tl">
+      <li><time>2011.04</time>東京都千代田区にて設立</li>
+      <li><time>2015.10</time>クラウド導入支援サービスを開始</li>
+      <li><time>2019.06</time>大阪営業所を開設</li>
+      <li><time>2023.01</time>ISMS（ISO/IEC 27001）認証を取得</li>
+      <li><time>2026.04</time>累計支援企業数が480社を突破</li>
+    </ol>
+  </div></section>
+  <section class="recruit"><div class="wrap">
+    <div><p class="eyebrow" style="color:#d9efff">Recruit</p><h2 style="margin:0">一緒に働く仲間を募集しています</h2></div>
+    <a class="btn" href="#" data-go="corp-contact">採用情報を見る</a>
+  </div></section>
+  <section class="sec" data-sec="corp-contact"><div class="wrap">
+    <p class="eyebrow">Contact</p><h2>お問い合わせ</h2>
+    <form class="form" data-form>
+      <label for="c-co">会社名<input id="c-co"></label>
+      <label for="c-name">ご担当者名<input id="c-name" required></label>
+      <label for="c-mail">メールアドレス<input id="c-mail" type="email" required></label>
+      <label for="c-msg">ご相談内容<textarea id="c-msg" rows="4"></textarea></label>
+      <div><button class="btn" type="submit">送信する</button></div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div></section>
+  <footer class="foot"><div class="wrap"><span>© NEXLINK Inc.</span><span>※架空の会社によるサンプルです</span></div></footer>
+</div>
+
+<script>
+(function(){
+  // サイト内ナビ：該当セクションへスクロール
+  document.addEventListener("click",function(e){
+    var a=e.target.closest("[data-go]"); if(!a) return;
+    e.preventDefault();
+    var s=document.querySelector('[data-sec="'+a.dataset.go+'"]');
+    if(s){var y=s.getBoundingClientRect().top+window.scrollY-60;window.scrollTo({top:y,behavior:"smooth"})}
+  });
+
+  // フォーム（デモ）
+  document.querySelectorAll("[data-form]").forEach(function(f){
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      f.querySelector(".form-msg").textContent="これはサンプルのため、送信はされません（納品時に送信先を設定します）。";
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

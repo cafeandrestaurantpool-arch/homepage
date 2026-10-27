@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pilates Studio LINEA｜自由が丘のマシンピラティス</title>
+<meta name="description" content="Pilates Studio LINEA｜自由が丘のマシンピラティス（サンプルサイト）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;600&family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Maru+Gothic:wght@500;700&family=Zen+Old+Mincho:wght@600;900&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+.site :focus-visible{outline:2px solid #4a90e2;outline-offset:2px}
+/* ---- 共通パーツ（各サイトの変数で見た目が変わる） ---- */
+.site{background:var(--bg);color:var(--fg);font-family:var(--fb);line-height:1.8;font-size:15px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:18px}
+.logo{font-family:var(--fd);font-size:22px;line-height:1.2}
+.logo small{display:block;font-family:var(--fb);font-size:11px;letter-spacing:.12em;opacity:.7}
+.nav{display:flex;gap:6px 20px;flex-wrap:wrap;font-size:13px}
+.nav a{text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;text-decoration:underline}
+.sec{padding-block:72px}
+.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;font-weight:700}
+.site h1,.site h2,.site h3{font-family:var(--fd);text-wrap:balance;line-height:1.35}
+.site h2{font-size:clamp(24px,3.6vw,34px);margin:.25em 0 1em}
+.site h3{font-size:18px;margin:.6em 0 .3em}
+.lead{max-width:36em;opacity:.85}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.grid>*{min-width:0}
+.ph{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;border-radius:var(--r);display:flex;align-items:flex-end;padding:12px 14px;font-size:11px;letter-spacing:.06em;overflow:hidden}
+.ph span{background:rgba(0,0,0,.35);color:#fff;padding:2px 8px;border-radius:4px}
+.btn{display:inline-block;appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14px;padding:13px 26px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1px currentColor}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:left;vertical-align:top}
+.tbl th{font-weight:700;white-space:nowrap;width:9em}
+.foot{border-top:1px solid var(--line);font-size:12px;opacity:.8}
+.foot .wrap{padding-block:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.form{display:grid;gap:14px;max-width:560px}
+.form label{display:grid;gap:4px;font-size:13px;font-weight:700}
+.form input,.form textarea,.form select{font:inherit;font-weight:400;padding:11px 12px;border:1px solid var(--line);border-radius:var(--r);background:var(--field);color:var(--fg);width:100%}
+.form-msg{font-size:13px;color:var(--accent);font-weight:700;min-height:1.4em}
+.price-list{list-style:none;margin:0;padding:0}
+.price-list li{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.price-list .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.price-list .yen{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+.price-list small{display:block;font-size:12px;opacity:.7}
+.demo-note{font-size:11px;opacity:.6}
+
+/* ===== 4 ピラティス ===== */
+.s-pila{--bg:#f2f4ef;--fg:#2c3832;--accent:#6f8c79;--on-accent:#fff;--line:#d6ddd3;--field:#fff;--r:999px;
+  --fd:"Zen Maru Gothic","Jost",sans-serif;--fb:"Zen Maru Gothic",sans-serif}
+.s-pila .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-block:32px 72px}
+.s-pila .hero h1{font-size:clamp(32px,5.4vw,56px);font-weight:700;margin:.2em 0 .5em;letter-spacing:.02em}
+.s-pila .hero .ph{border-radius:200px 200px 24px 24px;aspect-ratio:4/5;background:linear-gradient(180deg,#d9cbb3,#b9a785 50%,#8fa595)}
+.s-pila .badge{display:inline-flex;gap:10px;align-items:baseline;background:#fff;border-radius:999px;padding:8px 18px;font-size:13px;margin-bottom:20px}
+.s-pila .badge b{font-family:"Jost",sans-serif;font-size:22px;color:var(--accent)}
+.s-pila .feat{background:#fff;border-radius:28px;padding:28px}
+.s-pila .feat .ico{width:44px;height:44px;border-radius:50%;background:#e3e9df;display:grid;place-items:center;color:var(--accent);font-weight:700}
+.s-pila .plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.s-pila .plan{border:1px solid var(--line);border-radius:28px;padding:26px 24px;background:#fff;display:flex;flex-direction:column;gap:6px}
+.s-pila .plan.pick{background:var(--accent);color:#fff;border-color:var(--accent)}
+.s-pila .plan .amt{font-family:"Jost",sans-serif;font-size:32px;font-weight:600;font-variant-numeric:tabular-nums}
+.s-pila .plan small{font-size:12px;opacity:.75}
+.s-pila .sched th,.s-pila .sched td{text-align:center;width:auto;font-size:13px}
+.s-pila .sched td span{display:inline-block;background:#e3e9df;border-radius:999px;padding:2px 10px;font-size:12px}
+.s-pila .form input,.s-pila .form select,.s-pila .form textarea{border-radius:14px}
+
+@media (max-width:760px){
+  .s-salon .hero .wrap,.s-build .hero .wrap,.s-cafe .hero .wrap,.s-pila .hero .wrap,.s-clinic .hero .wrap,.s-shop .hero .wrap{grid-template-columns:1fr}
+  .s-salon .ph,.s-build .hero .ph,.s-pila .hero .ph{aspect-ratio:4/3}
+  .s-cafe .hero .ph{aspect-ratio:4/3}
+  .s-clinic .news li{grid-template-columns:1fr auto}
+  .s-clinic .news li span:last-child{grid-column:1/-1}
+  .sec{padding-block:52px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<div class="site s-pila" id="v-pilates">
+  <header class="hdr"><div class="wrap">
+    <div class="logo" style="font-family:'Jost',sans-serif;letter-spacing:.2em">LINEA<small>マシンピラティス 自由が丘</small></div>
+    <nav class="nav"><a href="#" data-go="pila-feat">特徴</a><a href="#" data-go="pila-plan">料金</a><a href="#" data-go="pila-sched">スケジュール</a><a href="#" data-go="pila-trial">体験予約</a></nav>
+  </div></header>
+  <section class="hero"><div class="wrap">
+    <div>
+      <div class="badge">初回体験レッスン <b>¥3,300</b></div>
+      <h1>姿勢が変わると、<br>毎日が変わる。</h1>
+      <p class="lead">定員4名の少人数制マシンピラティス。運動が苦手な方、肩こりや腰の重さが気になる方にも続けやすいレッスンです。</p>
+      <p style="margin-top:24px"><a class="btn" href="#" data-go="pila-trial">体験レッスンを予約</a></p>
+    </div>
+    <div class="ph"><span>写真：レッスン風景（差し替え）</span></div>
+  </div></section>
+  <section class="sec" data-sec="pila-feat"><div class="wrap">
+    <p class="eyebrow">Feature</p><h2>LINEAが選ばれる理由</h2>
+    <div class="grid">
+      <div class="feat"><div class="ico">4</div><h3>定員4名の少人数制</h3><p>インストラクターが一人ひとりのフォームを確認します。</p></div>
+      <div class="feat"><div class="ico">R</div><h3>リフォーマーを全台完備</h3><p>マシンの補助があるので、初心者でも正しい動きを覚えられます。</p></div>
+      <div class="feat"><div class="ico">7</div><h3>朝7時から夜21時まで</h3><p>出勤前や仕事帰りにも通いやすい時間帯です。</p></div>
+    </div>
+  </div></section>
+  <section class="sec" data-sec="pila-plan" style="background:#e7ece3"><div class="wrap">
+    <p class="eyebrow">Price</p><h2>料金プラン</h2>
+    <div class="plans">
+      <div class="plan"><span>月4回</span><span class="amt">¥19,800</span><small>1回あたり ¥4,950</small></div>
+      <div class="plan pick"><span>月8回（人気）</span><span class="amt">¥33,000</span><small>1回あたり ¥4,125</small></div>
+      <div class="plan"><span>通い放題</span><span class="amt">¥42,900</span><small>1日1回まで</small></div>
+      <div class="plan"><span>パーソナル（50分）</span><span class="amt">¥9,900</span><small>1回ごとのお支払い</small></div>
+    </div>
+    <p class="demo-note" style="margin-top:14px">入会金 ¥11,000（体験当日のご入会で無料）。表示価格は税込です。</p>
+  </div></section>
+  <section class="sec" data-sec="pila-sched"><div class="wrap">
+    <p class="eyebrow">Schedule</p><h2>週間スケジュール</h2>
+    <div class="tbl-wrap"><table class="tbl sched">
+      <thead><tr><th>時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr></thead>
+      <tbody>
+        <tr><th>7:00</th><td><span>基礎</span></td><td></td><td><span>基礎</span></td><td></td><td><span>基礎</span></td><td><span>基礎</span></td><td></td></tr>
+        <tr><th>10:00</th><td><span>姿勢改善</span></td><td><span>基礎</span></td><td><span>産後ケア</span></td><td><span>基礎</span></td><td><span>姿勢改善</span></td><td><span>シェイプ</span></td><td><span>基礎</span></td></tr>
+        <tr><th>19:00</th><td><span>シェイプ</span></td><td><span>姿勢改善</span></td><td><span>シェイプ</span></td><td><span>姿勢改善</span></td><td><span>基礎</span></td><td></td><td></td></tr>
+        <tr><th>20:15</th><td><span>基礎</span></td><td><span>シェイプ</span></td><td></td><td><span>シェイプ</span></td><td><span>シェイプ</span></td><td></td><td></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+  <section class="sec" data-sec="pila-trial" style="background:#e7ece3"><div class="wrap">
+    <p class="eyebrow">Trial</p><h2>体験レッスンのご予約</h2>
+    <form class="form" data-form>
+      <label for="p-name">お名前<input id="p-name" required></label>
+      <label for="p-mail">メールアドレス<input id="p-mail" type="email" required></label>
+      <label for="p-day">ご希望の曜日・時間<select id="p-day"><option>平日 朝（7:00）</option><option>平日 昼（10:00）</option><option>平日 夜（19:00以降）</option><option>土日</option></select></label>
+      <div><button class="btn" type="submit">予約を申し込む</button></div>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div></section>
+  <footer class="foot"><div class="wrap"><span>© Pilates Studio LINEA　東京都目黒区自由が丘0-0-0</span><span>※架空のスタジオによるサンプルです</span></div></footer>
+</div>
+
+<script>
+(function(){
+  // サイト内ナビ：該当セクションへスクロール
+  document.addEventListener("click",function(e){
+    var a=e.target.closest("[data-go]"); if(!a) return;
+    e.preventDefault();
+    var s=document.querySelector('[data-sec="'+a.dataset.go+'"]');
+    if(s){var y=s.getBoundingClientRect().top+window.scrollY-60;window.scrollTo({top:y,behavior:"smooth"})}
+  });
+
+  // フォーム（デモ）
+  document.querySelectorAll("[data-form]").forEach(function(f){
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      f.querySelector(".form-msg").textContent="これはサンプルのため、送信はされません（納品時に送信先を設定します）。";
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

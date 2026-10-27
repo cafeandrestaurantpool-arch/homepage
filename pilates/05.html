@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ととのう処 和心｜鎌倉のピラティススタジオ</title>
+<meta name="description" content="からだを、ととのえる。 ととのう処 和心｜鎌倉のピラティススタジオ（サンプルサイト・和モダン）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;-webkit-text-size-adjust:100%}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+h1,h2,h3{word-break:auto-phrase}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+section[id]{scroll-margin-top:72px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.ph{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;display:flex;align-items:flex-end;padding:12px 14px;font-size:11px;letter-spacing:.06em;overflow:hidden}
+.ph.sq{aspect-ratio:1}
+.ph span{background:rgba(0,0,0,.38);color:#fff;padding:2px 8px;border-radius:3px}
+.tscroll{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse}
+.tbl th,.tbl td{text-align:left;vertical-align:top;padding:14px 10px;border-bottom:1px solid var(--line)}
+.tbl th{white-space:nowrap;width:9em;font-weight:600}
+.cards3{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.cards4{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.cards3>*,.cards4>*{min-width:0}
+.svcs{display:grid;gap:0 48px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.svc{padding:22px 0;border-bottom:1px solid var(--line)}
+.svc h3,.feat h3,.gitem h3,.staff h3,.work h3{margin:.2em 0 .3em}
+.svc p,.feat p,.gitem p,.staff p,.work p{margin:0;font-size:.92em;opacity:.85}
+.staff .role{font-size:12px;opacity:.65;margin:0 0 4px}
+.pgroups{display:grid;gap:12px 56px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.plist{list-style:none;margin:0;padding:0}
+.plist li{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.plist .dots{flex:1;min-width:16px;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+.plist small{display:block;font-size:12px;opacity:.65}
+.yen{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+.note{font-size:12px;opacity:.65;margin-top:14px}
+.plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+.plan{display:flex;flex-direction:column;gap:4px;padding:26px 22px}
+.pl-amt{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums}
+.plan small{font-size:12px;opacity:.7}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.stat{background:var(--bg);padding:24px 20px}
+.stat b{display:block;font-size:32px;font-variant-numeric:tabular-nums;color:var(--accent);line-height:1.2}
+.stat span{font-size:12px;opacity:.75}
+.flow{list-style:none;margin:0;padding:0;counter-reset:f}
+.flow li{counter-increment:f;display:grid;grid-template-columns:3.2em 1fr;column-gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.flow li::before{content:counter(f,decimal-leading-zero);grid-row:span 2;color:var(--accent);font-size:22px;font-weight:700;line-height:1.3}
+.flow span{font-size:.9em;opacity:.8}
+.hours table{width:100%;border-collapse:collapse;text-align:center;font-size:14px}
+.hours th,.hours td{padding:11px 4px;border-bottom:1px solid var(--line)}
+.hours td.o{color:var(--accent);font-weight:700} .hours td.x{opacity:.35}
+.hours p{font-size:13px;margin:12px 0 0}
+.news{list-style:none;margin:0;padding:0}
+.news li{display:grid;grid-template-columns:7.5em auto 1fr;gap:12px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.news time{font-variant-numeric:tabular-nums;font-size:14px;opacity:.7}
+.tag{font-size:11px;padding:2px 8px;white-space:nowrap;border:1px solid currentColor;border-radius:3px}
+.nums{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr))}
+.nums b{display:block;font-size:48px;line-height:1.1;font-variant-numeric:tabular-nums;font-weight:500}
+.nums b small{font-size:16px;margin-left:4px}
+.nums span{font-size:12px;opacity:.7}
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 22px 24px}
+.tl li::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl time{display:block;font-weight:600;font-variant-numeric:tabular-nums}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.fbtn{appearance:none;font:inherit;font-size:13px;padding:6px 16px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.fbtn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.products{display:grid;gap:28px 20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr))}
+.prod{display:flex;flex-direction:column;gap:6px;min-width:0}
+.prod .meta{font-size:11px;opacity:.6;letter-spacing:.06em}
+.prod h3{font-size:14px;margin:0}
+.prod .yen small{font-size:11px;opacity:.6;font-weight:400}
+.add{appearance:none;font:inherit;font-size:13px;padding:9px;margin-top:auto;cursor:pointer;background:transparent;color:var(--fg);border:1px solid var(--fg)}
+.add:hover{background:var(--fg);color:var(--bg)}
+.cart{display:inline-flex;align-items:center;gap:8px;font-size:13px}
+.cart b{background:var(--accent);color:var(--bg);border-radius:999px;min-width:22px;text-align:center;font-size:12px;padding:1px 6px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#222;color:#fff;font-size:13px;padding:10px 18px;border-radius:999px;z-index:50;max-width:90vw}
+.form{display:grid;gap:14px;max-width:560px}
+.form label{display:grid;gap:5px;font-size:13px;font-weight:600}
+.form input,.form select,.form textarea{font:inherit;font-weight:400;padding:12px;width:100%;border:1px solid var(--line);background:var(--field);color:var(--fg)}
+.form-msg{font-size:13px;min-height:1.4em;color:var(--accent);font-weight:600}
+.btn{display:inline-block;appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:14px;padding:14px 28px;text-decoration:none}
+.foot-note{font-size:11px;opacity:.6}
+@media (max-width:760px){.news li{grid-template-columns:1fr auto} .news li span:last-child{grid-column:1/-1}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+
+.wa{--bg:#f4f2ec;--fg:#1f2530;--accent:#4f6e4c;--indigo:#26395b;--line:#d9d4c7;--field:#fbfaf6;
+ background:var(--bg);color:var(--fg);font-family:"Zen Kaku Gothic New",sans-serif;line-height:1.95;font-size:15px;letter-spacing:.04em;
+ background-image:radial-gradient(rgba(31,37,48,.035) 1px,transparent 1px);background-size:4px 4px}
+.wa h1,.wa h2,.wa h3,.logo{font-family:"Zen Old Mincho",serif;font-weight:700;line-height:1.5}
+.side{position:fixed;inset:0 auto 0 0;width:120px;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:28px;padding:28px 0 24px;padding-left:env(safe-area-inset-left,0px);background:var(--bg);z-index:20}
+.logo{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:14px}
+.seal{display:grid;place-items:center;width:44px;height:44px;background:var(--accent);color:#fff;font-size:22px;border-radius:4px}
+.lname{writing-mode:vertical-rl;font-size:18px;letter-spacing:.2em}
+.nav{writing-mode:vertical-rl;display:flex;gap:18px;font-size:13px;letter-spacing:.2em}
+.nav a{text-decoration:none} .nav a:hover{color:var(--accent)}
+.cart{writing-mode:horizontal-tb}
+.main{margin-left:120px}
+.ship{background:var(--indigo);color:#fff;font-size:12px;text-align:center;padding:7px 16px}
+.hero{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:0;padding:40px max(18px,env(safe-area-inset-right,0px)) 72px 40px;max-width:1120px}
+.hero-ph{aspect-ratio:16/10;display:flex;align-items:flex-end;padding:12px 14px;font-size:11px}
+.hero-ph span{background:rgba(0,0,0,.38);color:#fff;padding:2px 8px}
+.hero-copy{grid-row:1/3;grid-column:2;padding-left:28px}
+.hero h1{writing-mode:vertical-rl;font-size:clamp(30px,4.4vw,52px);font-weight:900;letter-spacing:.18em;margin:0;line-height:1.7}
+.hero-foot{max-width:34em;padding-top:28px}
+.hero-sub{font-family:"Zen Old Mincho",serif;color:var(--accent);margin:0;font-weight:700}
+.lead{margin:.4em 0 1.4em}
+.btn{background:var(--indigo);color:#fff;font-weight:500;letter-spacing:.2em;border-radius:2px}
+.btn:hover{background:var(--accent)}
+.sec{display:grid;grid-template-columns:72px 1fr;gap:36px;padding:72px max(18px,env(safe-area-inset-right,0px)) 72px 40px;max-width:1120px;border-top:1px solid var(--line)}
+.sec>*{min-width:0}
+.sh{display:flex;writing-mode:vertical-rl;gap:12px;align-items:center}
+.sh h2{font-size:26px;letter-spacing:.25em;margin:0}
+.sh .en{font-size:11px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;font-family:"Zen Kaku Gothic New",sans-serif}
+.zno,.fico{font-family:"Zen Old Mincho",serif;color:var(--accent);font-size:28px;font-weight:900}
+.feat{border-left:2px solid var(--accent);padding-left:18px}
+.svc h3::before{content:"◆ ";color:var(--accent);font-size:.7em;vertical-align:.15em}
+.pgroup h3{color:var(--accent)}
+.yen{font-family:"Zen Old Mincho",serif;font-size:17px}
+.plan{background:var(--field);border:1px solid var(--line)}
+.plan.pick{background:var(--indigo);color:#fff;border-color:var(--indigo)}
+.pl-amt{font-family:"Zen Old Mincho",serif;font-weight:900}
+.stat b,.nums b{font-family:"Zen Old Mincho",serif;font-weight:900;color:var(--accent)}
+.flow li::before{font-family:"Zen Old Mincho",serif;font-weight:900}
+.hours{background:var(--field);border:1px solid var(--line);padding:20px}
+.tag{color:var(--accent)}
+.tl li::before{background:var(--accent);border-radius:0;transform:rotate(45deg);width:10px;height:10px;left:-6px}
+.tl time{font-family:"Zen Old Mincho",serif}
+.fbtn{border-radius:2px}
+.fbtn[aria-pressed="true"]{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.add:hover{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.gitem{border-top:2px solid var(--indigo);padding-top:14px}
+.tbl th{font-family:"Zen Old Mincho",serif}
+.form input,.form select,.form textarea{border-radius:2px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:32px max(18px,env(safe-area-inset-right,0px)) 32px 40px;border-top:1px solid var(--line);font-family:"Zen Old Mincho",serif;max-width:1120px}
+@media (max-width:860px){
+ .side{position:sticky;top:0;inset:auto;width:auto;flex-direction:row;justify-content:space-between;padding:10px max(18px,env(safe-area-inset-right,0px)) 10px max(18px,env(safe-area-inset-left,0px));border-right:0;border-bottom:1px solid var(--line)}
+ .logo{flex-direction:row} .lname{writing-mode:horizontal-tb;font-size:16px;letter-spacing:.08em} .seal{width:34px;height:34px;font-size:17px}
+ .nav{display:none}
+ .main{margin-left:0}
+ .hero{padding:24px max(18px,env(safe-area-inset-right,0px)) 56px max(18px,env(safe-area-inset-left,0px));gap:0}
+ .hero-copy{padding-left:16px}
+ .hero h1{font-size:26px}
+ .hero-foot{grid-column:1/-1}
+ .sec{grid-template-columns:1fr;gap:20px;padding:56px max(18px,env(safe-area-inset-right,0px)) 56px max(18px,env(safe-area-inset-left,0px))}
+ .sh{writing-mode:horizontal-tb;align-items:baseline} .sh h2{font-size:22px;letter-spacing:.12em}
+ .foot{padding-inline:max(18px,env(safe-area-inset-left,0px))}
+}
+
+</style>
+</head>
+<body class="wa">
+<aside class="side"><a class="logo" href="#top"><span class="seal">和</span><span class="lname">ととのう処 和心</span></a>
+<nav class="nav"><a href="#services">クラス紹介</a><a href="#plans">料金プラン</a><a href="#info">スタジオ情報</a><a href="#contact">体験レッスンのご予約</a></nav></aside>
+<main class="main">
+<section class="hero" id="top">
+<div class="hero-ph" style="background:linear-gradient(150deg,#d9cbb3,#8fa595)"><span>写真：メインビジュアル（差し替え）</span></div>
+<div class="hero-copy"><h1>からだを、ととのえる。</h1></div>
+<div class="hero-foot"><p class="hero-sub">鎌倉のピラティススタジオ</p><p class="lead">定員4名の少人数制マシンピラティス。肩こりや腰の重さが気になる方、運動が苦手な方でも、無理なく続けられるレッスンです。</p><a class="btn" href="#contact">体験レッスンを予約</a></div>
+</section>
+<section id="features" class="sec"><div class="sh"><h2>私たちの特徴</h2><span class="en">Concept</span></div><div class="sb"><div class="cards3 feats"><div class="feat"><span class="fico">1</span><h3>定員4名の少人数制</h3><p>インストラクターが一人ひとりのフォームを確認します。</p></div><div class="feat"><span class="fico">2</span><h3>リフォーマーを全台完備</h3><p>マシンの補助があるので、初心者でも正しく動けます。</p></div><div class="feat"><span class="fico">3</span><h3>朝7時から夜21時まで</h3><p>出勤前や仕事帰りにも通いやすい時間帯です。</p></div></div></div></section><section id="services" class="sec"><div class="sh"><h2>クラス紹介</h2><span class="en">Class</span></div><div class="sb"><div class="svcs"><div class="svc"><h3>基礎クラス</h3><p>呼吸と骨盤の動かし方から始める初心者向けクラス。</p></div><div class="svc"><h3>姿勢改善クラス</h3><p>猫背や反り腰が気になる方のためのクラス。</p></div><div class="svc"><h3>産後ケアクラス</h3><p>産後2か月以降の方を対象にした骨盤底ケア。</p></div><div class="svc"><h3>パーソナル</h3><p>目的に合わせて組み立てる50分のマンツーマン。</p></div></div></div></section><section id="plans" class="sec"><div class="sh"><h2>料金プラン</h2><span class="en">Price</span></div><div class="sb"><div class="plans"><div class="plan"><span class="pl-name">月4回</span><span class="pl-amt">¥19,800</span><small>1回あたり ¥4,950</small></div><div class="plan pick"><span class="pl-name">月8回（人気）</span><span class="pl-amt">¥33,000</span><small>1回あたり ¥4,125</small></div><div class="plan"><span class="pl-name">通い放題</span><span class="pl-amt">¥42,900</span><small>1日1回まで</small></div><div class="plan"><span class="pl-name">パーソナル</span><span class="pl-amt">¥9,900</span><small>50分・都度払い</small></div></div><p class="note">初回体験レッスン ¥3,300／入会金 ¥11,000（体験当日のご入会で無料）。価格は税込です。</p></div></section><section id="info" class="sec"><div class="sh"><h2>スタジオ情報</h2><span class="en">Information</span></div><div class="sb"><div class="tscroll"><table class="tbl"><tr><th>営業時間</th><td>7:00–21:00</td></tr><tr><th>定休日</th><td>不定休</td></tr><tr><th>住所</th><td>東京都○○区○○0-0-0 3F</td></tr><tr><th>アクセス</th><td>○○駅より徒歩4分</td></tr><tr><th>持ち物</th><td>動きやすい服装・飲み物（ソックスは貸出あり）</td></tr></table></div></div></section><section id="contact" class="sec"><div class="sh"><h2>体験レッスンのご予約</h2><span class="en">Contact</span></div><div class="sb"><form class="form" data-form>
+<label for="pi-name">お名前<input id="pi-name" required></label>
+<label for="pi-mail">メールアドレス<input id="pi-mail" type="email" required></label>
+<label for="pi-kind">ご希望の時間帯<select id="pi-kind"><option>平日 朝</option><option>平日 昼</option><option>平日 夜</option><option>土日</option></select></label>
+<label for="pi-msg">メッセージ<textarea id="pi-msg" rows="4"></textarea></label>
+<div><button class="btn" type="submit">送信する</button></div>
+<p class="form-msg" aria-live="polite"></p>
+</form></div></section>
+<footer class="foot"><span>ととのう処 和心</span><span class="foot-note">© ととのう処 和心　※架空の店舗・会社によるサンプルサイトです</span></footer>
+</main>
+
+<script>
+(function(){
+  document.querySelectorAll("[data-form]").forEach(function(f){
+    f.addEventListener("submit",function(e){e.preventDefault();
+      f.querySelector(".form-msg").textContent="これはサンプルのため、送信はされません（納品時に送信先を設定します）。";});
+  });
+})();
+</script>
+</body>
+</html>

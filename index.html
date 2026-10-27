@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>業種別ホームページ見本帳</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&family=Jost:wght@400;600&display=swap">
+<style>
+/* Layout: 見出し＋凡例、業種ごとに5パターンのカードを横並び */
+:root{--bg:#f6f6f4;--fg:#1c1d20;--mute:#6c6e74;--line:#dedfdc;--card:#ffffff;--accent:#2f5bd3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16171a;--fg:#ececea;--mute:#9a9ca2;--line:#2c2e33;--card:#1f2024;--accent:#8aa7ff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16171a;--fg:#ececea;--mute:#9a9ca2;--line:#2c2e33;--card:#1f2024;--accent:#8aa7ff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.7}
+.wrap{max-width:1180px;margin:0 auto;padding-block:48px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:clamp(26px,4vw,38px);margin:0 0 6px;text-wrap:balance}
+.sub{color:var(--mute);margin:0 0 24px;max-width:44em}
+.legend{list-style:none;padding:0;margin:0 0 40px;display:flex;flex-wrap:wrap;gap:8px}
+.legend li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:13px;display:flex;gap:8px;align-items:baseline}
+.legend b{font-family:"Jost",sans-serif;color:var(--accent)}
+.legend span{color:var(--mute);font-size:12px}
+.ind{padding-block:20px;border-top:1px solid var(--line)}
+.ind h2{font-size:18px;margin:0 0 14px;display:flex;gap:10px;align-items:baseline}
+.ind h2 span{font-family:"Jost",sans-serif;font-size:12px;font-weight:400;color:var(--mute)}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(5,minmax(0,1fr))}
+.card{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.thumb{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/10;max-width:100%;border-radius:6px;overflow:hidden;background:var(--b);padding:6px}
+.thumb i:nth-child(1){grid-row:span 2;background:linear-gradient(150deg,var(--p1),var(--p2));border-radius:3px}
+.thumb i:nth-child(2){background:var(--a);border-radius:3px}
+.thumb i:nth-child(3){background:color-mix(in srgb,var(--a) 35%,var(--b));border-radius:3px}
+.meta{display:flex;gap:6px;align-items:baseline;font-size:12px}
+.no{font-family:"Jost",sans-serif;font-weight:600;color:var(--accent)}
+.st{font-weight:700}
+.nm{font-size:12px;color:var(--mute);overflow-wrap:anywhere}
+.foot{color:var(--mute);font-size:12px;margin-top:32px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:520px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head><body>
+<div class="wrap">
+<h1>業種別ホームページ見本帳</h1>
+<p class="sub">7業種 × 5パターン、計35サイト。店名・住所・電話番号はすべて架空です。気になるカードを開いて、デザインと構成を比べてください。</p>
+<ul class="legend"><li><b>01</b>ナチュラル<span>業種らしい配色の基本形</span></li><li><b>02</b>高級感<span>暗色・明朝・全面写真</span></li><li><b>03</b>ポップ<span>角丸カード・波形の区切り</span></li><li><b>04</b>ミニマル<span>大きな文字・2カラム</span></li><li><b>05</b>和モダン<span>縦書き・左サイドバー</span></li></ul>
+<section class="ind"><h2>美容室<span>salon/</span></h2><div class="cards"><a class="card" href="salon/01.html">
+<span class="thumb" style="--a:#5f7a8a;--b:#eef0f0;--p1:#c9d3d8;--p2:#7f97a3"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">01</span><span class="st">ナチュラル</span></span><span class="nm">HAIR ATELIER sora</span></a><a class="card" href="salon/02.html">
+<span class="thumb" style="--a:#c9a96e;--b:#121014;--p1:#c9d3d8;--p2:#7f97a3"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">02</span><span class="st">高級感</span></span><span class="nm">Salon de NOIR</span></a><a class="card" href="salon/03.html">
+<span class="thumb" style="--a:#ff8fa3;--b:#ffd166;--p1:#c9d3d8;--p2:#7f97a3"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">03</span><span class="st">ポップ</span></span><span class="nm">hair &amp; make PEACH</span></a><a class="card" href="salon/04.html">
+<span class="thumb" style="--a:#8a6f5c;--b:#ffffff;--p1:#c9d3d8;--p2:#7f97a3"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">04</span><span class="st">ミニマル</span></span><span class="nm">kami.</span></a><a class="card" href="salon/05.html">
+<span class="thumb" style="--a:#8e3f52;--b:#f4f2ec;--p1:#c9d3d8;--p2:#7f97a3"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">05</span><span class="st">和モダン</span></span><span class="nm">髪結い 凛</span></a></div></section><section class="ind"><h2>工務店<span>build/</span></h2><div class="cards"><a class="card" href="build/01.html">
+<span class="thumb" style="--a:#9a6a3a;--b:#1f3a2e;--p1:#c9a77c;--p2:#6b4a2b"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">01</span><span class="st">ナチュラル</span></span><span class="nm">森下工務店</span></a><a class="card" href="build/02.html">
+<span class="thumb" style="--a:#bf9a6c;--b:#101311;--p1:#c9a77c;--p2:#6b4a2b"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">02</span><span class="st">高級感</span></span><span class="nm">柏木建築設計工房</span></a><a class="card" href="build/03.html">
+<span class="thumb" style="--a:#f6a25b;--b:#6cc59a;--p1:#c9a77c;--p2:#6b4a2b"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">03</span><span class="st">ポップ</span></span><span class="nm">ハレノヒ工務店</span></a><a class="card" href="build/04.html">
+<span class="thumb" style="--a:#4b6b4f;--b:#ffffff;--p1:#c9a77c;--p2:#6b4a2b"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">04</span><span class="st">ミニマル</span></span><span class="nm">TOMOE HOME</span></a><a class="card" href="build/05.html">
+<span class="thumb" style="--a:#6b4f2a;--b:#f4f2ec;--p1:#c9a77c;--p2:#6b4a2b"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">05</span><span class="st">和モダン</span></span><span class="nm">匠和工務店</span></a></div></section><section class="ind"><h2>カフェ<span>cafe/</span></h2><div class="cards"><a class="card" href="cafe/01.html">
+<span class="thumb" style="--a:#e0ad45;--b:#22332a;--p1:#a07a52;--p2:#3b2a1c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">01</span><span class="st">ナチュラル</span></span><span class="nm">喫茶こもれび</span></a><a class="card" href="cafe/02.html">
+<span class="thumb" style="--a:#c99554;--b:#140f0c;--p1:#a07a52;--p2:#3b2a1c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">02</span><span class="st">高級感</span></span><span class="nm">COFFEE SALON 琥珀</span></a><a class="card" href="cafe/03.html">
+<span class="thumb" style="--a:#ffc44d;--b:#ff8c69;--p1:#a07a52;--p2:#3b2a1c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">03</span><span class="st">ポップ</span></span><span class="nm">SUNNY DAY CAFE</span></a><a class="card" href="cafe/04.html">
+<span class="thumb" style="--a:#9a4f2b;--b:#ffffff;--p1:#a07a52;--p2:#3b2a1c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">04</span><span class="st">ミニマル</span></span><span class="nm">STAND 9</span></a><a class="card" href="cafe/05.html">
+<span class="thumb" style="--a:#7a4528;--b:#f4f2ec;--p1:#a07a52;--p2:#3b2a1c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">05</span><span class="st">和モダン</span></span><span class="nm">茶房 ゆるり</span></a></div></section><section class="ind"><h2>ピラティス<span>pilates/</span></h2><div class="cards"><a class="card" href="pilates/01.html">
+<span class="thumb" style="--a:#6f8c79;--b:#f2f4ef;--p1:#d9cbb3;--p2:#8fa595"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">01</span><span class="st">ナチュラル</span></span><span class="nm">Pilates Studio LINEA</span></a><a class="card" href="pilates/02.html">
+<span class="thumb" style="--a:#cdb89c;--b:#12110f;--p1:#d9cbb3;--p2:#8fa595"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">02</span><span class="st">高級感</span></span><span class="nm">Pilates Atelier ÉLAN</span></a><a class="card" href="pilates/03.html">
+<span class="thumb" style="--a:#7fd6b5;--b:#ffd36b;--p1:#d9cbb3;--p2:#8fa595"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">03</span><span class="st">ポップ</span></span><span class="nm">ピラティス POCO</span></a><a class="card" href="pilates/04.html">
+<span class="thumb" style="--a:#5f766a;--b:#ffffff;--p1:#d9cbb3;--p2:#8fa595"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">04</span><span class="st">ミニマル</span></span><span class="nm">FORM pilates</span></a><a class="card" href="pilates/05.html">
+<span class="thumb" style="--a:#4f6e4c;--b:#f4f2ec;--p1:#d9cbb3;--p2:#8fa595"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">05</span><span class="st">和モダン</span></span><span class="nm">ととのう処 和心</span></a></div></section><section class="ind"><h2>クリニック<span>clinic/</span></h2><div class="cards"><a class="card" href="clinic/01.html">
+<span class="thumb" style="--a:#17707c;--b:#eaf4f5;--p1:#d6e8ec;--p2:#7fb3bf"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">01</span><span class="st">ナチュラル</span></span><span class="nm">さくら台内科クリニック</span></a><a class="card" href="clinic/02.html">
+<span class="thumb" style="--a:#a9c2cf;--b:#0e1215;--p1:#d6e8ec;--p2:#7fb3bf"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">02</span><span class="st">高級感</span></span><span class="nm">LUCE内科クリニック</span></a><a class="card" href="clinic/03.html">
+<span class="thumb" style="--a:#6cc4f7;--b:#ffab91;--p1:#d6e8ec;--p2:#7fb3bf"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">03</span><span class="st">ポップ</span></span><span class="nm">にこにこファミリークリニック</span></a><a class="card" href="clinic/04.html">
+<span class="thumb" style="--a:#0b6e7a;--b:#ffffff;--p1:#d6e8ec;--p2:#7fb3bf"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">04</span><span class="st">ミニマル</span></span><span class="nm">Kクリニック</span></a><a class="card" href="clinic/05.html">
+<span class="thumb" style="--a:#2c6675;--b:#f4f2ec;--p1:#d6e8ec;--p2:#7fb3bf"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">05</span><span class="st">和モダン</span></span><span class="nm">ひだまり内科医院</span></a></div></section><section class="ind"><h2>通販サイト<span>shop/</span></h2><div class="cards"><a class="card" href="shop/01.html">
+<span class="thumb" style="--a:#2f5470;--b:#f5f5f2;--p1:#e7e2d8;--p2:#6f7f8c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">01</span><span class="st">ナチュラル</span></span><span class="nm">器と暮らし つむぎ</span></a><a class="card" href="shop/02.html">
+<span class="thumb" style="--a:#c4aa7f;--b:#111111;--p1:#e7e2d8;--p2:#6f7f8c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">02</span><span class="st">高級感</span></span><span class="nm">MAISON TSUMUGI</span></a><a class="card" href="shop/03.html">
+<span class="thumb" style="--a:#f7a8c0;--b:#8fd3e8;--p1:#e7e2d8;--p2:#6f7f8c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">03</span><span class="st">ポップ</span></span><span class="nm">うつわのおみせ ころころ</span></a><a class="card" href="shop/04.html">
+<span class="thumb" style="--a:#2b4a6b;--b:#ffffff;--p1:#e7e2d8;--p2:#6f7f8c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">04</span><span class="st">ミニマル</span></span><span class="nm">OBJ. store</span></a><a class="card" href="shop/05.html">
+<span class="thumb" style="--a:#26395b;--b:#f4f2ec;--p1:#e7e2d8;--p2:#6f7f8c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">05</span><span class="st">和モダン</span></span><span class="nm">器 藍屋</span></a></div></section><section class="ind"><h2>会社<span>corp/</span></h2><div class="cards"><a class="card" href="corp/01.html">
+<span class="thumb" style="--a:#2a8fc9;--b:#0f1b2e;--p1:#9fb3cc;--p2:#2c3e5c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">01</span><span class="st">ナチュラル</span></span><span class="nm">株式会社ネクスリンク</span></a><a class="card" href="corp/02.html">
+<span class="thumb" style="--a:#b3c3dc;--b:#0b0f17;--p1:#9fb3cc;--p2:#2c3e5c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">02</span><span class="st">高級感</span></span><span class="nm">ARCLINE Partners</span></a><a class="card" href="corp/03.html">
+<span class="thumb" style="--a:#5b9bff;--b:#ffcb47;--p1:#9fb3cc;--p2:#2c3e5c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">03</span><span class="st">ポップ</span></span><span class="nm">株式会社ミライテック</span></a><a class="card" href="corp/04.html">
+<span class="thumb" style="--a:#1f4fd1;--b:#ffffff;--p1:#9fb3cc;--p2:#2c3e5c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">04</span><span class="st">ミニマル</span></span><span class="nm">Grid Inc.</span></a><a class="card" href="corp/05.html">
+<span class="thumb" style="--a:#a8382a;--b:#f4f2ec;--p1:#9fb3cc;--p2:#2c3e5c"><i></i><i></i><i></i></span>
+<span class="meta"><span class="no">05</span><span class="st">和モダン</span></span><span class="nm">株式会社 和結</span></a></div></section>
+<p class="foot">写真枠はすべて仮のグラデーションです。納品時にクライアントの写真へ差し替えます。</p>
+</div>
+</body></html>
